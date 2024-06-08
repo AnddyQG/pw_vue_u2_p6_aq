@@ -1,23 +1,29 @@
 <template>
-  <img src="./assets/logo.png" alt="No existe">
-  
-<Contador titulo="Estudiante"/>
-<Contador titulo="Profesor"/>
-<Contador titulo=""/>
+  <!-- <Contador></Contador> puedo abreviarlo-->
+  <img alt="Vue logo" src="./assets/logo.png">
+  <Contador titulo="Estudiante" :num="-1" /> <!-- Accedo a props desde componente padre -->
+  <Contador titulo="Profesor"/>
+
+  <Contador :num="calcularValor()" /> <!-- Otra forma de v-bind -->
 </template>
-
+ 
 <script>
-import Contador from './components/Contador.vue'
-
+import Contador from "./components/Contador.vue";
+ 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Contador
-
+    Contador,
+  },
+ 
+  methods: {
+    calcularValor() {
+      return 10 + 2;
+    }
   }
-}
+};
 </script>
-
+ 
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -28,3 +34,4 @@ export default {
   margin-top: 60px;
 }
 </style>
+ 
