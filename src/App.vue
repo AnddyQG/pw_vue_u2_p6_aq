@@ -1,21 +1,16 @@
 <template>
-  <!-- <Contador></Contador> puedo abreviarlo-->
-  <img alt="Vue logo" src="./assets/logo.png">
-
-
-  <Pregunta/>
-
+  <PokemonPage />
 </template>
- 
+
 <script>
-import Pregunta from "./components/Pregunta.vue";
- 
+import PokemonPage from "./pages/PokemonPage.vue";
+
 export default {
   name: "App",
   components: {
-    Pregunta,
+    PokemonPage,
   },
- 
+
   methods: {
     calcularValor() {
       return 10 + 2;
@@ -23,7 +18,7 @@ export default {
   }
 };
 </script>
- 
+
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -34,4 +29,3 @@ export default {
   margin-top: 60px;
 }
 </style>
- 
