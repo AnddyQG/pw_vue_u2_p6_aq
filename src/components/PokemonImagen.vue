@@ -5,7 +5,8 @@
   
   <img v-show="!mostrarPokemon"
   class="oculta-pokemon"
-  src ="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/99.svg" alt="Error en la imagen"/>
+  v-bind:src ="imagenSrc" alt="Error en la img"
+/>
 </div>
 </template>
 
@@ -55,7 +56,7 @@ img {
 
 .pokemon-container {
     height:400px;
-    background-color: rgb(227, 156, 105);
+    background-color: rgb(121, 44, 44);
 }
 
 </style>

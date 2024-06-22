@@ -3,10 +3,10 @@ const obtenerVectorNumerico=(longitud)=>{
 
 const vector=[];
 for(let i=0;i<longitud;i++){
-    vector[i]=obtenerAleatorio(1,600)
+    vector[i]=obtenerAleatorio(1,100)
 
 }
-
+return vector
 }
 
 function obtenerAleatorio(min,max){
@@ -20,7 +20,7 @@ return  Math.floor(Math.random()*(max-min+1)+min)
     for(let i=0;i< vector.length;i++){
       vectorFinal[i]=await construirPokemon(vector[i]);
     }
-    return vectorFinal;
+    return vectorFinal ;
 }
 
 async function construirPokemon(identificador){
